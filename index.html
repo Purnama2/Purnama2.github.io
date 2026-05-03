@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio Purnama</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Pacifico&display=swap" rel="stylesheet">
+
+  <style>
+    *{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
+
+    body{background: linear-gradient(135deg, #e9d5ff, #c4b5fd);color:#4c1d95;overflow-x:hidden;}
+
+    header{display:flex;justify-content:space-between;align-items:center;padding:20px 40px;position:fixed;width:100%;top:0;background:rgba(196,181,253,0.6);backdrop-filter:blur(10px);z-index:1000;}
+
+    header h1{font-family:'Pacifico',cursive;color:#a78bfa;}
+
+    nav a{margin-left:20px;text-decoration:none;color:white;transition:0.3s;}
+    nav a:hover{color:#ffe4ff;}
+
+    section{min-height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:100px 20px;}
+
+    #contact{min-height:auto;padding:60px 20px;}
+
+    .hero h2{font-size:3rem;}
+
+    .btn{margin-top:20px;padding:12px 25px;border-radius:30px;border:none;background:#a78bfa;color:white;font-weight:bold;cursor:pointer;transition:0.3s;}
+    .btn:hover{transform:scale(1.1);background:#c4b5fd;}
+
+    .card-container{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px;width:80%;margin-top:30px;}
+
+    .card{background:rgba(255,255,255,0.2);padding:20px;border-radius:20px;transition:0.3s;}
+    .card:hover{transform:translateY(-10px) scale(1.05);background:rgba(255,255,255,0.3);}
+
+    footer{text-align:center;padding:20px;background:rgba(196,181,253,0.6);}
+
+  </style>
+</head>
+
+<body>
+
+<header>
+  <h1>Purnama ✨</h1>
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#about">Tentang</a>
+    <a href="#project">Keahlian</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<section id="home" class="hero">
+  <h2>Halo, Aku Purnama 💜</h2>
+  <p>NIM D0225027 | Web Developer</p>
+  <button class="btn" onclick="goProject()">Profil ➜</button>
+</section>
+
+<section id="about">
+  <h2>Tentang Saya 💫</h2>
+  <p>Saya adalah mahasiswa yang memiliki minat besar dalam bidang pengembangan website dan desain antarmuka. Saya suka membuat tampilan web yang modern, interaktif, dan menarik secara visual.</p>
+  <button class="btn" onclick="goSkill()">Next ➜ Keahlian</button>
+</section>
+
+<section id="project">
+  <h2>Keahlian Aku 🎀</h2>
+
+  <div class="card-container">
+    <div class="card">
+      <h3>Frontend Web 💻</h3>
+      <p>Mampu membuat tampilan website modern dan responsif.</p>
+    </div>
+
+    <div class="card">
+      <h3>UI/UX Design 🎨</h3>
+      <p>Mendesain tampilan yang menarik dan user-friendly.</p>
+    </div>
+
+    <div class="card">
+      <h3>Basic Programming ⚙️</h3>
+      <p>Menguasai dasar HTML, CSS, dan JavaScript.</p>
+    </div>
+  </div>
+
+  <button class="btn" onclick="goContact()">Next ➜ Kontak</button>
+</section>
+
+<section id="contact">
+  <h2>Kontak 📩</h2>
+  <p>Email: purnama@email.com</p>
+</section>
+
+<footer>
+  <p>© 2026 Purnama 💜</p>
+</footer>
+
+<script>
+function goProject(){
+  document.getElementById('about').scrollIntoView({behavior:'smooth'});
+}
+
+function goSkill(){
+  document.getElementById('project').scrollIntoView({behavior:'smooth'});
+}
+
+function goContact(){
+  document.getElementById('contact').scrollIntoView({behavior:'smooth'});
+}
+</script>
+
+</body>
+</html>
